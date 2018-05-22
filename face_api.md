@@ -17,7 +17,7 @@ camera_id    | 字符串     |  是   | 人脸识别终端摄像头id， 桔牛�
 camera_type  | 字符串     |  是   | 人脸识别终端摄像头类型 pos收银台/gate店门口
 random       | 整数       |  是   | 10位随机数字
 sign         | 字符串     |  是   | 签名，（请参照下面“接口sign的计算方式“部分）
-face_data    | 数组       |  是   | 人脸数据，由face_id和face_img对象组成的数组（可能同时识别到多个人），参照face_data参数说明
+face_data    | 数组       |  是   | 人脸数据，由face_id和face_img对象组成的数组（可能同时识别到多个人），参照下面face_data参数说明
   
 face_data参数组成 :
  
@@ -50,5 +50,23 @@ face_img     | 字符串      |  是   | 人脸图片的base64编码
 
 例如在上例中，sign=MD5("partner_id=abc123&partner_token=2d2e22sdk&terminal_id=a001&terminal_pwd=wdlksdw223&camera_id=a001002&camera_type=pos&random=1234567890")  
 
-> 加密拼接串中的partner_token为桔牛提供。terminal_pwd为桔牛和合作方协商生成。
-        
+> 加密拼接串中的partner_token为桔牛提供。terminal_pwd为桔牛和合作方协商生成。  
+
+#### 返回结果
+接口返回一个json格式的内容  
+当发生错误时：
+```
+{
+    "errorCode":"camera_not_exists",
+    "errorInfo":"摄像头不存在",
+    "data":""
+}
+```
+仅当errorCode为0时表示成功：
+```
+{
+    "errorCode":"0",
+    "errorInfo":"",
+    "data":""
+}
+```
