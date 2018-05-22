@@ -14,7 +14,7 @@ https://api.juniuo.com/face/notify.do
 partner_id   | 字符串     |  是   | 提供人脸识别支持的合作方， 桔牛提供
 terminal_id  | 字符串     |  是   | 人脸识别的终端机器id， 桔牛与合作方协商生成
 camera_id    | 字符串     |  是   | 人脸识别终端摄像头id， 桔牛与合作方协商成成
-camera_type  | 字符串     |  是   | 人脸识别终端摄像头类型 pos收银台/gate店门口
+camera_type  | 字符串     |  是   | 人脸识别终端摄像头类型 pos/gate（分别表示收银台/店门口）
 random       | 整数       |  是   | 10位随机数字
 sign         | 字符串     |  是   | 签名，（请参照下面“接口sign的计算方式“部分）
 face_data    | 数组       |  是   | 人脸数据，由face_id和face_img对象组成的数组（可能同时识别到多个人），参照下面face_data参数说明
