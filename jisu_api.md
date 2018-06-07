@@ -6,7 +6,7 @@
 
 ### 申请审核状态通知
 - 接口地址  
-  https://<host>/jisu/audit_result.do
+  https://[host]/jisu/audit_result.do
 - 接口参数 
 
  值            | 类型   |  描述 
@@ -22,7 +22,7 @@ notify_time    | string | 通知时间（2018-04-03 13:03:44）
 
 ### 放款出帐通知
 - 接口地址  
-  https://<host>/jisu/loan_notify.do
+  https://[host]/jisu/loan_notify.do
 - 接口参数 
 
 值              | 类型     | 描述
@@ -42,7 +42,7 @@ notify_time     |  string  |  通知时间（2018-04-03 13:03:44）
 
 ### 还款结清通知
 - 接口地址  
-  https://<host>/jisu/settle_notify.do
+  https://[host]/jisu/settle_notify.do
 - 接口参数 
 
  值            | 类型   |  描述 
